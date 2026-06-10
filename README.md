@@ -1,4 +1,4 @@
-# ARM: An AutoRegressive Large Multimodal Model with Unified Discrete Representations
+# ARM: An AutoRegressive Large Multimodal Model with Discrete Visual Representations
 
 <p align="left">
 	<img src="assets/TEAI_logo.png" width="45%" alt="Institute of Trustworthy Embodied AI logo">
