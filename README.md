@@ -101,7 +101,7 @@ For text-to-image generation, the autoregressive model predicts the visual token
 
 ### 👉 Semantic Tokens Reduce the Need for CFG
 
-Since our semantic visual tokens that are already aligned with language, generation remains coherent even with weak or disabled classifier-free guidance. CFG mainly improves local smoothness and suppresses small artifacts.
+Since our semantic visual tokens are already aligned with language, generation remains coherent even with weak or disabled classifier-free guidance. CFG mainly improves local smoothness and suppresses small artifacts.
 
 <p align="center">
 	<img src="assets/cfg.png" width="92%" alt="ARM generation with and without CFG">
@@ -115,6 +115,7 @@ If you find ARM helpful for your research, please consider starring this reposit
 @misc{wang2026arm,
 	title  = {ARM: An AutoRegressive Large Multimodal Model with Unified Discrete Representations},
 	author = {Wang, Junke and Wang, Xiao and Pan, Jiacheng and Hu, Xuefeng and Li, Feng and Sun, Jingxiang and Deng, Chaorui and Chen, Zilong and Chen, Yunpeng and Tian, Kaibin and Gwilliam, Matthew and Chen, Hao and Guan, Danhui and Xu, Kun and Huang, Weilin and Wu, Zuxuan and Fan, Haoqi and Jiang, Yu-Gang and Yang, Zhenheng},
+	journal={arXiv preprint arXiv:2606.11188},
 	year   = {2026}
 }
 ```
