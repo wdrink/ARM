@@ -10,6 +10,11 @@ Junke Wang*, Xiao Wang*, Jiacheng Pan*, Xuefeng Hu*, Feng Li, Jingxiang Sun, Cha
 
 <small><em>* Equal contribution. † Corresponding authors.</em></small>
 
+## News
+
+- Paper released, please stay tuned for more updates!
+- If you are interested in discussions, collaborations or related opportunities, please reach out through jkwang0724@gmail.com.
+
 ## Highlights
 
 **ARM** is a unified autoregressive multimodal model that represents images as discrete tokens. It formulates image understanding, text-to-image generation, and instruction-guided editing with next-token prediction.
@@ -109,7 +114,7 @@ Since our visual tokens are already aligned with language, generation remains co
 
 ## Citation
 
-If you find ARM helpful for your research, please consider starring this repository and citing our work.
+If you find ARM helpful for your research, please consider starring this repository and citing our work. 
 
 ```bibtex
 @misc{wang2026arm,
