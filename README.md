@@ -15,7 +15,7 @@ Junke Wang<sup>*</sup>, Xiao Wang<sup>*</sup>, Jiacheng Pan<sup>*</sup>, Xuefeng
 **ARM** is a unified autoregressive multimodal model that represents images as discrete semantic tokens and handles understanding, text-to-image generation, and instruction-guided editing with next-token prediction.
 
 - 🌟 **Unified discrete visual representation:** shared visual token space supports understanding, generation, and editing.
-- 🍺 **Pure autoregressive multimodal modeling:** standard next-token prediction on both image and text tokens.
+- 🍺 **Pure autoregressive multimodal modeling:** standard next-token prediction on interleaved multimodal tokens.
 - 🔥 **Effective RL for visual token prediction:** preference optimization improves generation and editing significantly.
 
 <p align="center">
@@ -26,7 +26,7 @@ Junke Wang<sup>*</sup>, Xiao Wang<sup>*</sup>, Jiacheng Pan<sup>*</sup>, Xuefeng
 
 ### Unified Visual Tokenizer
 
-ARM first learns a semantic visual tokenizer that maps images into compact discrete tokens. It is supervised with caption loss, pixel reconstruction loss, sigmoid contrastive loss, and feature distillation loss.
+ARM first learns a semantic visual tokenizer that maps images into compact discrete tokens. It is supervised with complementary losses to develop strong semantics while preserving details.
 
 <p align="center">
 	<img src="assets/tokenizer.png" width="92%" alt="ARM unified visual tokenizer with multi-objective supervision">
@@ -34,7 +34,7 @@ ARM first learns a semantic visual tokenizer that maps images into compact discr
 
 ### Unified Autoregressive Model
 
-Based on the tokenizer, ARM represents multimodal inputs and outputs as one-dimensional token sequences. A single autoregressive model then performs image understanding, text-to-image generation, and image editing through next-multimodal-token prediction.
+Based on the above tokenizer, ARM packs multimodal inputs and outputs as 1D token sequences. A single autoregressive model then performs image understanding, text-to-image generation, and image editing through next-multimodal-token prediction.
 
 <p align="center">
 	<img src="assets/generation.png" width="92%" alt="ARM unified reconstruction, generation, and editing pipeline">
@@ -56,7 +56,7 @@ ARM achieves state-of-the-art performance among unified autoregressive models, r
 
 ### 2. Image Editing
 
-Suprisingly, RL brings a substantial improvement for image editing, raising the GEdit-Bench-EN overall score from 5.75 to 6.68 while preserving strong perceptual quality.
+Suprisingly, RL brings a substantial improvement for image editing, raising the GEdit-Bench-EN overall score from 5.75 to 6.68.
 
 <p align="center">
 	<img src="assets/editing_benchmark.png" width="92%" alt="Image editing benchmark comparison">
@@ -68,7 +68,7 @@ Suprisingly, RL brings a substantial improvement for image editing, raising the 
 
 ### 3. Image Understanding
 
-ARM achieves the best overall performance among models based on discrete visual representations, showing that its tokenizer preserves strong semantics for recognition and reasoning.
+ARM achieves the best overall performance among models based on discrete visual representations.
 
 | Model | POPE | MMB | MME-Perception | MMMU | GQA | VQAv2 | SEED |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
@@ -93,7 +93,7 @@ For image reconstruction, different diffusion decoders recover highly similar co
 	<img src="assets/compare_recon.png" width="92%" alt="Decoder reconstruction comparison">
 </p>
 
-For text-to-image generation, the autoregressive model predicts the visual tokens that determine composition and semantics, while the diffusion decoder mainly affects pixel-level rendering quality.
+For text-to-image generation, the autoregressive model predicts the visual tokens that determine layout and composition, while the diffusion decoder mainly affects pixel-level rendering quality.
 
 <p align="center">
 	<img src="assets/compare_t2i.png" width="92%" alt="Decoder text-to-image comparison">
@@ -101,7 +101,7 @@ For text-to-image generation, the autoregressive model predicts the visual token
 
 ### 👉 Semantic Tokens Reduce the Need for CFG
 
-Since our semantic visual tokens are already aligned with language, generation remains coherent even with weak or disabled classifier-free guidance. CFG mainly improves local smoothness and suppresses small artifacts.
+Since our visual tokens are already aligned with language, generation remains coherent even with weak or disabled classifier-free guidance. CFG mainly improves local smoothness and suppresses small artifacts.
 
 <p align="center">
 	<img src="assets/cfg.png" width="92%" alt="ARM generation with and without CFG">
