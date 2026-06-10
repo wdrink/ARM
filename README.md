@@ -6,13 +6,13 @@
 	<img src="assets/seed_logo.png" width="45%" alt="ByteDance Seed logo">
 </p>
 
-Junke Wang<sup>*</sup>, Xiao Wang<sup>*</sup>, Jiacheng Pan<sup>*</sup>, Xuefeng Hu<sup>*</sup>, Feng Li, Jingxiang Sun, Chaorui Deng, Zilong Chen, Yunpeng Chen, Kaibin Tian, Matthew Gwilliam, Hao Chen, Danhui Guan, Kun Xu, Weilin Huang, Zuxuan Wu<sup>†</sup>, Haoqi Fan<sup>†</sup>, Yu-Gang Jiang<sup>†</sup>, Zhenheng Yang<sup>†</sup>
+Junke Wang*, Xiao Wang*, Jiacheng Pan*, Xuefeng Hu*, Feng Li, Jingxiang Sun, Chaorui Deng, Zilong Chen, Yunpeng Chen, Kaibin Tian, Matthew Gwilliam, Hao Chen, Danhui Guan, Kun Xu, Weilin Huang, Zuxuan Wu<sup>†</sup>, Haoqi Fan<sup>†</sup>, Yu-Gang Jiang<sup>†</sup>, Zhenheng Yang<sup>†</sup>
 
 <small><em>* Equal contribution. † Corresponding authors.</em></small>
 
 ## Highlights
 
-**ARM** is a unified autoregressive multimodal model that represents images as discrete semantic tokens and handles understanding, text-to-image generation, and instruction-guided editing with next-token prediction.
+**ARM** is a unified autoregressive multimodal model that represents images as discrete tokens. It formulates image understanding, text-to-image generation, and instruction-guided editing with next-token prediction.
 
 - 🌟 **Unified discrete visual representation:** shared visual token space supports understanding, generation, and editing.
 - 🍺 **Pure autoregressive multimodal modeling:** standard next-token prediction on interleaved multimodal tokens.
